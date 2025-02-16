@@ -10,9 +10,9 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="<!-- ##{'timestamp':1458409245}## -->。">
+<meta name="description" content="无意间看到了[设计笔记](https://www.idevs.cn)新发布的主题，这种简洁风让我眼前一亮，于是就有了扒皮的打算。">
 <meta property="og:title" content="移植wordpress主题idevise到妹blog">
-<meta property="og:description" content="<!-- ##{'timestamp':1458409245}## -->。">
+<meta property="og:description" content="无意间看到了[设计笔记](https://www.idevs.cn)新发布的主题，这种简洁风让我眼前一亮，于是就有了扒皮的打算。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wrisin.github.io/post/yi-zhi-wordpress-zhu-ti-idevise-dao-mei-blog.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -73,7 +73,31 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"></div>
+<div class="markdown-body" id="postBody"><p>无意间看到了<a href="https://www.idevs.cn" rel="nofollow">设计笔记</a>新发布的主题，这种简洁风让我眼前一亮，于是就有了扒皮的打算。本来是想扒到typecho的，但是觉得移植完主题还要把文章一个一个复制上去，就觉得好麻烦，于是就试试把这个主题扒到妹blog上。（安利一下妹blog。这个是卜卜菊苣14年写的一款博客程序，小巧轻便，目前更新到v2版本了）</p>
+<p>妹blog默认主题和程序钉在一起了，一直起来很不方便，我也不懂xmp什么鬼，于是一遍一遍试，好长时间才弄明白怎么回事。</p>
+<p>吐槽一下：我刚开始扒的时候是照着第一版的，也就是最老的一个版本，结果扒完漏洞百出，然后逛了一下主题主页，才发现都更新到第六版了，然后又照着改了一遍。</p>
+<p>有好些地方阉割掉了，比如原生的pjax和返回顶部等等，有些地方代码也不是原生的。</p>
+<h2>更新动态</h2>
+<p>（2016.3.27）</p>
+<ul>
+<li>更换css式样，修复了分页按钮空白处。</li>
+<li>将header移入main</li>
+<li>增加列表页图标更换功能</li>
+</ul>
+<h2>小发现</h2>
+<ul>
+<li>xmp需隐藏</li>
+<li>ol class=\"comment \"在js中写法为ol.comment</li>
+</ul>
+<p>还有好多，都忘了orz...</p>
+<h2>相关链接</h2>
+<p><a href="http://mouto.org/#!54091" rel="nofollow">妹blog发布页</a></p>
+<p><a href="https://www.idevs.cn/idevise/" rel="nofollow">idevise主题原版（wordpress）</a></p>
+<p>2022年7月2日评：</p>
+<p>设计笔记已搬家，现在汪汪用的Wing主题也是出自此人，网名为Tokin，<a href="https://biji.io/" rel="nofollow">戳我围观</a>。</p>
+<p>我们有一个群，里面都是博主，群内保持人数在50人左右，少招多清。我有幸在群里，Tokin也在。当时扒皮也是先斩后奏，Tokin并未生气，毕竟扒皮不是一件光彩的事情。他反而很高兴地把我的网站挂到主题发布页展示（<a href="https://biji.io/2016/3661.html" rel="nofollow">戳我围观</a>，对，那个域名为i.acg.vc的就是我），当时觉得很感动了。</p>
+<p>这篇文章写于2016年3月20号，还有3个月就高考了，我真佩服我自己，都迫在眉睫了还在网上冲浪。。</p>
+</div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
