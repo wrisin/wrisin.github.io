@@ -1,6 +1,6 @@
 星期二用小米火警抢到两台，买了一台，哈哈。
 
-![a15b4afegw1ewgx61towpj21kw16ogu9.jpg](http://img.juihsin.wang/images/e46c73a25e7d01a12b935eb597f85d4a2135f1d5.jpg)
+![Image](https://github.com/user-attachments/assets/d7479333-be34-4646-bf16-f76c8a10037f)
 
 其实手机4月22号就到了，这篇文章算是补发。
 
@@ -11,31 +11,31 @@
 
 下面是我拆包装的图，大家可以看看，图片不是这么详细，将就看看。。
 
-![a15b4afegw1ewgx7iohjvj21kw16on0m.jpg](http://img.juihsin.wang/images/9d122d40e70bb29e592136c1dc1a8e3172677106.jpg)
+![Image](https://github.com/user-attachments/assets/4375be60-5f44-43e1-9500-2855645f8795)
 
-![a15b4afegw1ewgx7ku37jj21kw16ogn7.jpg](http://img.juihsin.wang/images/94312958e677febbd0886b2bf369fafe0d1829ec.jpg)
+![Image](https://github.com/user-attachments/assets/4b8c568f-b970-441f-8b3a-16a99b9e1f3e)
 
-![a15b4afegw1ewgx7ocv75j21kw16omzm.jpg](http://img.juihsin.wang/images/1232cc25625f87535d9c6a32985825bbce2ffb7b.jpg)
+![Image](https://github.com/user-attachments/assets/72e4e8a6-84dc-4689-b1a3-9f28d7c53bbd)
 
-![a15b4afegw1ewgx7e4lsjj21kw16ojsx.jpg](http://img.juihsin.wang/images/e3b9eeee62b853c418b32d1e1c7b7c6cfb8f4086.jpg)
+![Image](https://github.com/user-attachments/assets/46c9291c-bfea-421b-9b7c-1a3cbdc63581)
 
-![a15b4afegw1ewgx7s2zotj21kw16ojuk.jpg](http://img.juihsin.wang/images/88d5c2383484bed3a53cca6d5de957bbe37f267d.jpg)
+![Image](https://github.com/user-attachments/assets/04abf538-98d8-421a-9046-816228867c77)
 
-![a15b4afegw1ewgx70r28nj21kw16ojtf.jpg](http://img.juihsin.wang/images/3ed55626a44c6320c385bacb722169791d02990a.jpg)
+![Image](https://github.com/user-attachments/assets/1e8776aa-44eb-46b0-b425-a9b81d850faf)
 
-![a15b4afegw1ewgx74l3usj21kw16ogoj.jpg](http://img.juihsin.wang/images/8bc3e7a4f620952d2402727235de54d41f6e2a75.jpg)
+![Image](https://github.com/user-attachments/assets/600b7814-ffed-4ae4-bd6e-91974ab7527f)
 
-![a15b4afegw1ewgx77tsc9j21kw16oq5j.jpg](http://img.juihsin.wang/images/c51e81050b583bcc29c62266543bfe7155dc269e.jpg)
+![Image](https://github.com/user-attachments/assets/cd30e3b8-2ed8-4a5e-83f3-f774e7672600)
 
-![a15b4afegw1ewgx7bv8poj21kw16on0v.jpg](http://img.juihsin.wang/images/3b2f82fdccc0ceb47537f2e0cf0d60a30400aefd.jpg)
+![Image](https://github.com/user-attachments/assets/addbfb8c-c588-42fa-b637-ff43215b32fd)
 
-![a15b4afegw1ewgx8mtnmhj21kw16omzr.jpg](http://img.juihsin.wang/images/42f787157a03114a571ffde0a8729cd60c39f902.jpg)
+![Image](https://github.com/user-attachments/assets/34a633da-1ef7-4c1d-8778-a7bc3c08f118)
 
 换上WINDOWS主题，嘻嘻。
 
-![a15b4afegw1ewgx9d9c0uj20zk0k0q3q.jpg](http://img.juihsin.wang/images/59c66fe3b8426a1e7694d9e2441c20d1f1ad3e26.jpg)
+![Image](https://github.com/user-attachments/assets/641e9a5e-3d7e-4ccd-bce5-fa4b286ea9c8)
 
-![a15b4afegw1ewgx9dkg6zj20zk0k0dgm.jpg](http://img.juihsin.wang/images/7f7bf027e47e962bb14f34f085374c297f5ab15c.jpg)
+![Image](https://github.com/user-attachments/assets/e05f93c6-c769-4c1e-9d08-52e876ddd3f6)
 
 4月26号，卖出。
 <!-- ##{"timestamp":1398441600}## -->
