@@ -1,4 +1,4 @@
-![a15b4afegy1fc4d9wbo6vj20gy0bot99.jpeg](http://img.juihsin.wang/images/3665bbb78f0a6bbb5ea4ffff4a9c13871b4ecd4a.jpeg)
+![Image](https://github.com/user-attachments/assets/3cb21332-2484-4a28-958b-4ec52ed3d356)
 
 话不多说，直接上步骤（以默认模板为例）。
 
