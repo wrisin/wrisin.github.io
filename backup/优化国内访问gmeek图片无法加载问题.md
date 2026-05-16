@@ -1,7 +1,7 @@
 gmeek文章基于github issues，issues附件图片在我家这片反正一直没正常显示过。得益于AI的变态发展，A到一个损失较小的解决方案：workers反代+脚本替换文章图片链接，好处是对gmeek构建程序完全没有修改，不影响后续升级。
 **操作前提：**
-1.你有一个顶级域名
-2.github已经绑定顶级域名
+1.你有一个域名
+2.gmeek已经绑定域名
 3.域名解析在cloudflare
 4.没了
 
@@ -60,5 +60,5 @@ export default {
 编辑config.json，复制粘贴以下代码到最后一行，点击commit changes➡️进入actions-build gmeek-run workflow➡️大功告成
 
 ```
-"script":"<script src='https://ygmz.net/ghattprx.js'></script>"
+"script":"<script src='https://你gmeek绑定的域名/ghattprx.js'></script>"
 ```

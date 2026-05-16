@@ -85,8 +85,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>gmeek文章基于github issues，issues附件图片在我家这片反正一直没正常显示过。得益于AI的变态发展，A到一个损失较小的解决方案：workers反代+脚本替换文章图片链接，好处是对gmeek构建程序完全没有修改，不影响后续升级。<br>
 <strong>操作前提：</strong><br>
-1.你有一个顶级域名<br>
-2.github已经绑定顶级域名<br>
+1.你有一个域名<br>
+2.gmeek已经绑定域名<br>
 3.域名解析在cloudflare<br>
 4.没了</p>
 <h3>一、配置Cloudflare</h3>
@@ -134,7 +134,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 })();
 </code></pre>
 <p>编辑config.json，复制粘贴以下代码到最后一行，点击commit changes➡️进入actions-build gmeek-run workflow➡️大功告成</p>
-<pre class="notranslate"><code class="notranslate">"script":"&lt;script src='https://ygmz.net/ghattprx.js'&gt;&lt;/script&gt;"
+<pre class="notranslate"><code class="notranslate">"script":"&lt;script src='https://你gmeek绑定的域名/ghattprx.js'&gt;&lt;/script&gt;"
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
