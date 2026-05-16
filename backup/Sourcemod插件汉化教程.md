@@ -6,11 +6,11 @@
 
 第二种，打开翻译文件
 
-![a15b4afegy1fo8alq5qv3j20ob0flaat.jpeg](http://img.juihsin.wang/images/eb81cca8c1ce13050d0d25bf8d18aba8776c72a7.jpeg)
+<img width="875" height="561" alt="Image" src="https://github.com/user-attachments/assets/675dcac5-5659-49e5-9a24-04c4202658d0" />
 
 如图所示，我们按格式新增一行
 
-![a15b4afegy1fo8aoj9dabj20ln0g4q3j.jpeg](http://img.juihsin.wang/images/82b5ecb1ef16d72c2f51d4ace9b00c23247e7c23.jpeg)
+<img width="779" height="580" alt="Image" src="https://github.com/user-attachments/assets/e87784fe-79f6-4d24-8aee-2a15bb9a1f8b" />
 
 前面红框中填入chi，后面红框中填入汉化后的文本。
 
