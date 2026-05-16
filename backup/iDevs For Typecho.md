@@ -19,7 +19,7 @@ iDevs主题，WordPress简单又漂亮地Pjax主题被移植到Typecho啦，鼓�
 
 不评论的都是坏蛋~
 
-![a15b4afegw1f666c84dx5g2019019glh.gif](http://img.juihsin.wang/images/26c87dc1c75c1e2b655df5f709dd218586f6bd9b.gif)
+<img width="45" height="45" alt="Image" src="https://github.com/user-attachments/assets/89b2dac0-296c-4a63-91e3-236b30d253ff" />
 
 [即刻下载](https://github.com/wrisin/iDevs-For-Typecho/archive/master.zip)
 
