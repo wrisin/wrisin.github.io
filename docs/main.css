@@ -1,7 +1,7 @@
 /* ============================================
-   一个马扎 - 现代简约大重构
-   不依赖 Primer.css，完全覆盖原有样式
-   可复制到任何页面的 <style> 标签中
+   一个马扎 - 现代简约 + Markdown 完整排版
+   支持：代码高亮、标题、引用、列表、emoji 等
+   完全覆盖原有样式，独立运行
    ============================================ */
 
 /* ---------- 强制重置 ---------- */
@@ -29,20 +29,19 @@ html, body {
     min-height: 100vh !important;
 }
 
-/* 暗色模式适配 */
 html[data-color-mode="dark"] body {
     background: #0a0a0a !important;
     color: #e5e5e5 !important;
 }
 
-/* ---------- 主容器重构 ---------- */
+/* ---------- 主容器 ---------- */
 body {
-    max-width: 720px !important;
+    max-width: 780px !important;
     margin: 0 auto !important;
     padding: 2rem 1.5rem !important;
 }
 
-/* ---------- 头部 -------- */
+/* ---------- 头部 ---------- */
 #header {
     display: flex !important;
     justify-content: space-between !important;
@@ -53,7 +52,6 @@ body {
     background: transparent !important;
 }
 
-/* 左侧品牌区 */
 .title-left {
     display: flex !important;
     align-items: center !important;
@@ -81,7 +79,6 @@ body {
     text-decoration: none !important;
 }
 
-/* 右侧导航按钮组 */
 .title-right {
     display: flex !important;
     gap: 0.5rem !important;
@@ -109,17 +106,16 @@ html[data-color-mode="dark"] .title-right .btn:hover {
     background: #2a2a2a !important;
 }
 
-/* 文章页大标题 */
 .postTitle {
     font-size: 2.5rem !important;
     font-weight: 700 !important;
     letter-spacing: -0.02em !important;
     line-height: 1.2 !important;
-    margin: 0 !important;
+    margin: 0 0 0.5rem 0 !important;
     color: inherit !important;
 }
 
-/* ---------- 副标题（春江花朝...）---------- */
+/* 副标题 */
 #content > div:first-child {
     font-size: 0.9rem !important;
     color: #666 !important;
@@ -130,7 +126,7 @@ html[data-color-mode="dark"] .title-right .btn:hover {
     font-style: normal !important;
 }
 
-/* ---------- 首页文章列表（卡片式大重构）---------- */
+/* ---------- 首页文章列表 ---------- */
 .SideNav {
     display: flex !important;
     flex-direction: column !important;
@@ -167,7 +163,6 @@ html[data-color-mode="dark"] .SideNav-item:hover {
     box-shadow: 0 12px 24px -12px rgba(255, 255, 255, 0.05) !important;
 }
 
-/* 文章项内部布局重排 */
 .d-flex {
     display: flex !important;
     align-items: center !important;
@@ -193,11 +188,6 @@ html[data-color-mode="dark"] .listTitle {
     color: #e5e5e5 !important;
 }
 
-.SideNav-item:hover .listTitle {
-    color: #000 !important;
-}
-
-/* 标签和时间行 */
 .listLabels {
     display: flex !important;
     gap: 0.75rem !important;
@@ -221,10 +211,6 @@ html[data-color-mode="dark"] .listTitle {
     text-decoration: none !important;
 }
 
-.Label a:hover {
-    color: #000 !important;
-}
-
 .LabelTime {
     background: transparent !important;
     color: #999 !important;
@@ -237,15 +223,11 @@ html[data-color-mode="dark"] .Label {
     color: #ccc !important;
 }
 
-html[data-color-mode="dark"] .Label a {
-    color: #ccc !important;
-}
-
 html[data-color-mode="dark"] .LabelTime {
     color: #666 !important;
 }
 
-/* ---------- 文章正文 ---------- */
+/* ========== Markdown 完整排版样式 ========== */
 .markdown-body {
     font-size: 1rem !important;
     line-height: 1.75 !important;
@@ -260,17 +242,266 @@ html[data-color-mode="dark"] .markdown-body {
     border-bottom-color: #2a2a2a !important;
 }
 
-.markdown-body p {
-    margin-bottom: 1.5rem !important;
+/* ----- 标题层级 ----- */
+.markdown-body h1 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin: 2rem 0 1rem 0 !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 2px solid #eaeaea !important;
+    letter-spacing: -0.02em !important;
 }
 
+.markdown-body h2 {
+    font-size: 1.5rem !important;
+    font-weight: 650 !important;
+    margin: 1.75rem 0 0.75rem 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.markdown-body h3 {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin: 1.5rem 0 0.5rem 0 !important;
+}
+
+.markdown-body h4 {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin: 1.25rem 0 0.5rem 0 !important;
+    color: #444 !important;
+}
+
+.markdown-body h5, .markdown-body h6 {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin: 1rem 0 0.5rem 0 !important;
+    color: #666 !important;
+}
+
+html[data-color-mode="dark"] .markdown-body h1 {
+    border-bottom-color: #2a2a2a !important;
+}
+html[data-color-mode="dark"] .markdown-body h4 {
+    color: #aaa !important;
+}
+html[data-color-mode="dark"] .markdown-body h5,
+html[data-color-mode="dark"] .markdown-body h6 {
+    color: #888 !important;
+}
+
+/* ----- 段落 & 行内元素 ----- */
+.markdown-body p {
+    margin-bottom: 1.25rem !important;
+}
+
+.markdown-body strong {
+    font-weight: 650 !important;
+    color: #000 !important;
+}
+
+html[data-color-mode="dark"] .markdown-body strong {
+    color: #fff !important;
+}
+
+.markdown-body em {
+    font-style: italic !important;
+}
+
+.markdown-body del {
+    text-decoration: line-through !important;
+    opacity: 0.7 !important;
+}
+
+.markdown-body a {
+    color: #3b82f6 !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid transparent !important;
+    transition: border-color 0.2s !important;
+}
+
+.markdown-body a:hover {
+    border-bottom-color: #3b82f6 !important;
+}
+
+html[data-color-mode="dark"] .markdown-body a {
+    color: #60a5fa !important;
+}
+
+/* ----- 列表 ----- */
+.markdown-body ul, .markdown-body ol {
+    margin: 0.75rem 0 1.25rem 1.75rem !important;
+    padding-left: 0 !important;
+}
+
+.markdown-body li {
+    margin: 0.35rem 0 !important;
+}
+
+.markdown-body ul {
+    list-style-type: disc !important;
+}
+
+.markdown-body ol {
+    list-style-type: decimal !important;
+}
+
+.markdown-body li > ul,
+.markdown-body li > ol {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+/* 任务列表 */
+.markdown-body input[type="checkbox"] {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 8px !important;
+    vertical-align: middle !important;
+    accent-color: #3b82f6 !important;
+}
+
+/* ----- 引用块 ----- */
+.markdown-body blockquote {
+    margin: 1.25rem 0 !important;
+    padding: 0.75rem 1.25rem !important;
+    border-left: 4px solid #3b82f6 !important;
+    background: #f8fafc !important;
+    color: #445566 !important;
+    font-style: normal !important;
+}
+
+html[data-color-mode="dark"] .markdown-body blockquote {
+    background: #111827 !important;
+    border-left-color: #60a5fa !important;
+    color: #cbd5e1 !important;
+}
+
+/* ----- 代码块 ----- */
+.markdown-body code {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace !important;
+    font-size: 0.85em !important;
+    padding: 0.2rem 0.4rem !important;
+    background: #f3f4f6 !important;
+    border-radius: 6px !important;
+    color: #d14 !important;
+}
+
+.markdown-body pre {
+    background: #1e1e2e !important;
+    padding: 1rem !important;
+    border-radius: 12px !important;
+    overflow-x: auto !important;
+    margin: 1.25rem 0 !important;
+}
+
+.markdown-body pre code {
+    background: transparent !important;
+    padding: 0 !important;
+    color: #f8f8f2 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    display: block !important;
+}
+
+html[data-color-mode="dark"] .markdown-body code:not(pre code) {
+    background: #1f1f2a !important;
+    color: #f87171 !important;
+}
+
+html[data-color-mode="dark"] .markdown-body pre {
+    background: #0f0f17 !important;
+}
+
+/* 代码块语言标签（可选美化） */
+.markdown-body pre::before {
+    content: attr(data-lang) !important;
+    display: block !important;
+    font-size: 0.7rem !important;
+    color: #888 !important;
+    margin-bottom: 0.5rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ----- 表格 ----- */
+.markdown-body table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1.25rem 0 !important;
+    overflow-x: auto !important;
+    display: block !important;
+}
+
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid #e0e0e0 !important;
+    padding: 0.6rem 0.8rem !important;
+    text-align: left !important;
+}
+
+.markdown-body th {
+    background: #f5f5f5 !important;
+    font-weight: 600 !important;
+}
+
+html[data-color-mode="dark"] .markdown-body th,
+html[data-color-mode="dark"] .markdown-body td {
+    border-color: #2a2a2a !important;
+}
+html[data-color-mode="dark"] .markdown-body th {
+    background: #1a1a1a !important;
+}
+
+/* ----- 水平分割线 ----- */
 .markdown-body hr {
-    margin: 2.5rem 0 !important;
+    margin: 2rem 0 !important;
     border: none !important;
     border-top: 1px solid #eaeaea !important;
+    height: 0 !important;
 }
 
-/* 评论按钮 */
+html[data-color-mode="dark"] .markdown-body hr {
+    border-top-color: #2a2a2a !important;
+}
+
+/* ----- 图片 ----- */
+.markdown-body img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin: 1rem 0 !important;
+    display: block !important;
+}
+
+/* ----- emoji 和特殊符号 ----- */
+.markdown-body .g-emoji,
+.markdown-body img.emoji {
+    display: inline !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    vertical-align: middle !important;
+}
+
+/* 兼容 GitHub 风格的 emoji */
+.g-emoji {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
+}
+
+/* ----- 脚注（如果使用）----- */
+.markdown-body .footnote-ref {
+    font-size: 0.8rem !important;
+    vertical-align: super !important;
+}
+
+.markdown-body .footnote-item {
+    font-size: 0.85rem !important;
+    margin-top: 0.5rem !important;
+    color: #666 !important;
+}
+
+/* ---------- 评论按钮 ---------- */
 #cmButton {
     background: #f5f5f5 !important;
     border: none !important;
@@ -297,11 +528,6 @@ html[data-color-mode="dark"] #cmButton {
 
 html[data-color-mode="dark"] #cmButton:hover {
     background: #2c2c2c !important;
-}
-
-/* 评论区容器 */
-#comments {
-    margin-top: 2rem !important;
 }
 
 /* ---------- 分页 ---------- */
@@ -333,19 +559,10 @@ html[data-color-mode="dark"] #cmButton:hover {
     transform: translateY(-1px) !important;
 }
 
-.pagination .previous_page[aria-disabled="true"] {
-    opacity: 0.4 !important;
-    cursor: default !important;
-}
-
 html[data-color-mode="dark"] .pagination a,
 html[data-color-mode="dark"] .pagination span {
     background: #1f1f1f !important;
     color: #ccc !important;
-}
-
-html[data-color-mode="dark"] .pagination a:hover {
-    background: #2c2c2c !important;
 }
 
 /* ---------- 页脚 ---------- */
@@ -363,16 +580,8 @@ html[data-color-mode="dark"] .pagination a:hover {
     text-decoration: none !important;
 }
 
-#footer a:hover {
-    text-decoration: underline !important;
-}
-
 html[data-color-mode="dark"] #footer {
     border-top-color: #2a2a2a !important;
-}
-
-html[data-color-mode="dark"] #footer a {
-    color: #aaa !important;
 }
 
 /* ---------- 响应式 ---------- */
@@ -385,21 +594,26 @@ html[data-color-mode="dark"] #footer a {
         font-size: 1.8rem !important;
     }
 
-    .SideNav-item {
-        padding: 1rem !important;
+    .markdown-body h1 {
+        font-size: 1.6rem !important;
+    }
+
+    .markdown-body h2 {
+        font-size: 1.3rem !important;
+    }
+
+    .markdown-body pre {
+        padding: 0.75rem !important;
+        font-size: 0.75rem !important;
     }
 
     .listLabels {
         margin-left: 34px !important;
         flex-wrap: wrap !important;
     }
-
-    .d-flex {
-        flex-wrap: wrap !important;
-    }
 }
 
-/* ---------- 辅助效果 ---------- */
+/* ---------- 辅助 ---------- */
 ::selection {
     background: #d4d4d4 !important;
     color: #000 !important;
@@ -408,10 +622,4 @@ html[data-color-mode="dark"] #footer a {
 html[data-color-mode="dark"] ::selection {
     background: #3a3a3a !important;
     color: #fff !important;
-}
-
-/* 隐藏不需要的原始边框残留 */
-[class*="border"],
-[class*="shadow"] {
-    box-shadow: none !important;
 }
