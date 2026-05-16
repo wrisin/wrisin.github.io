@@ -89,7 +89,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>和另一个小伙伴去看了烂片《功夫瑜伽》，上个星期又去看了《爱乐之城》，十分好看，强烈推荐。</p>
 <p>5.尴尬羞耻</p>
 <p>今日体检，全班小伙伴脱光光，感觉又一次开启了新世界的大门。</p>
-<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/6ac9b4dad58f75b49232bfa79f6aac2994f2f08c7b26417e2030f2ef2e2ca4ff/687474703a2f2f696d672e6a75696873696e2e77616e672f696d616765732f343862616430353763316531346265393036613834333231666165396230336134353533373966622e6a706567"><img src="https://camo.githubusercontent.com/6ac9b4dad58f75b49232bfa79f6aac2994f2f08c7b26417e2030f2ef2e2ca4ff/687474703a2f2f696d672e6a75696873696e2e77616e672f696d616765732f343862616430353763316531346265393036613834333231666165396230336134353533373966622e6a706567" alt="a15b4afegy1fd34gofbobj20sg0kq7bk.jpeg" data-canonical-src="http://img.juihsin.wang/images/48bad057c1e14be906a84321fae9b03a455379fb.jpeg" style="max-width: 100%;"></a></p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/91234cdc2175d09b7e7ed37fe298df7cf8ff373be14ef05b9ef22cf9ced178f6/687474703a2f2f696d672e6a75696873696e2e77616e672f696d616765732f343862616430353763316531346265393036613834333231666165396230336134353533373966622e6a706567"><img src="https://camo.githubusercontent.com/91234cdc2175d09b7e7ed37fe298df7cf8ff373be14ef05b9ef22cf9ced178f6/687474703a2f2f696d672e6a75696873696e2e77616e672f696d616765732f343862616430353763316531346265393036613834333231666165396230336134353533373966622e6a706567" alt="a15b4afegy1fd34gofbobj20sg0kq7bk.jpeg" data-canonical-src="http://img.juihsin.wang/images/48bad057c1e14be906a84321fae9b03a455379fb.jpeg" style="max-width: 100%;"></a></p>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
@@ -110,7 +110,7 @@ if(""!=""){
     var startSite=new Date("");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
 }
 </script></div>
 </body>
@@ -155,6 +155,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 function openComments(){
     cm=document.getElementById("comments");
     cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
     cmButton.innerHTML="loading";
     span=document.createElement("span");
     span.setAttribute("class","AnimatedEllipsis");
