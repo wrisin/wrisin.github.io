@@ -1,8 +1,9 @@
-// 文件名: ygmz-modern-v2.js
+// 文件名: ygmz-unified.js
+// 用途: 同时美化首页列表 + 文章正文页
 (function() {
     const style = document.createElement('style');
     style.textContent = `
-        /* ----- 重置 & 基础 ----- */
+        /* ===== 全局基础 ===== */
         * {
             margin: 0;
             padding: 0;
@@ -13,24 +14,25 @@
             background: #ffffff;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
             color: #111111;
-            line-height: 1.5;
+            line-height: 1.6;
             padding: 2rem 1rem;
             margin: 0 auto;
             max-width: 860px;
         }
 
-        /* 暗色模式 */
         html[data-color-mode="dark"] body {
             background: #0a0a0a;
             color: #ededed;
         }
 
-        /* ----- Header ----- */
+        /* ===== 头部（首页和文章页通用）===== */
         #header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding-bottom: 1.5rem;
             margin-bottom: 2rem;
             border-bottom: 1px solid #eaeaea;
         }
@@ -39,6 +41,7 @@
             border-bottom-color: #2a2a2a;
         }
 
+        /* 首页：标题区 */
         .title-left {
             display: flex;
             align-items: center;
@@ -59,8 +62,15 @@
             font-size: 1.5rem;
             font-weight: 600;
             letter-spacing: -0.3px;
-            color: inherit;
-            text-decoration: none;
+        }
+
+        /* 文章页：大标题 */
+        .postTitle {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+            margin: 0;
         }
 
         .title-right {
@@ -81,20 +91,7 @@
             background: #2a2a2a;
         }
 
-        /* 副标题 */
-        #content > div:first-child {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 2.5rem;
-            padding-left: 0;
-            border-left: none;
-            background: none;
-        }
-        html[data-color-mode="dark"] #content > div:first-child {
-            color: #aaa;
-        }
-
-        /* 文章列表 — 干净清爽 */
+        /* ===== 首页：文章列表 ===== */
         .SideNav {
             border: none;
             display: flex;
@@ -123,7 +120,6 @@
             border-bottom-color: #ccc;
         }
 
-        /* 左侧标题区域 */
         .d-flex {
             display: flex;
             align-items: center;
@@ -138,28 +134,13 @@
             opacity: 0.5;
             flex-shrink: 0;
         }
-        .SideNav-item:hover .SideNav-icon {
-            opacity: 0.8;
-        }
 
         .listTitle {
             font-size: 1rem;
             font-weight: 450;
-            color: #111;
             transition: color 0.2s;
         }
-        html[data-color-mode="dark"] .listTitle {
-            color: #eee;
-        }
-        .SideNav-item:hover .listTitle {
-            color: #000;
-            font-weight: 500;
-        }
-        html[data-color-mode="dark"] .SideNav-item:hover .listTitle {
-            color: #fff;
-        }
 
-        /* 右侧标签和时间 */
         .listLabels {
             display: flex;
             gap: 10px;
@@ -180,9 +161,6 @@
             color: #888 !important;
             text-decoration: none;
         }
-        .Label a:hover {
-            color: #111 !important;
-        }
         .LabelTime {
             background: none;
             border: none;
@@ -193,11 +171,53 @@
             border-color: #333;
             color: #aaa;
         }
-        html[data-color-mode="dark"] .LabelTime {
-            color: #666;
+
+        /* ===== 文章页：正文 ===== */
+        .markdown-body {
+            font-size: 1rem;
+            line-height: 1.75;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        /* 分页 */
+        html[data-color-mode="dark"] .markdown-body {
+            border-bottom-color: #1f1f1f;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .markdown-body hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #eaeaea;
+        }
+
+        /* 评论按钮 */
+        #cmButton {
+            background: transparent;
+            border: 1px solid #e0e0e0;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.85rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 2rem;
+        }
+        #cmButton:hover {
+            background: #f5f5f5;
+            border-color: #ccc;
+        }
+        html[data-color-mode="dark"] #cmButton {
+            border-color: #333;
+            color: #ccc;
+        }
+        html[data-color-mode="dark"] #cmButton:hover {
+            background: #1a1a1a;
+        }
+
+        /* ===== 分页（首页）===== */
         .paginate-container {
             margin-top: 3rem;
         }
@@ -209,31 +229,22 @@
         .pagination a, .pagination span {
             background: transparent;
             padding: 0.5rem 1rem;
-            border-radius: 0;
             font-size: 0.9rem;
-            font-weight: 400;
-            border: none;
             color: #333;
             text-decoration: none;
-            transition: all 0.2s;
         }
         .pagination a:hover {
             background: #f5f5f5;
-            color: #000;
         }
-        html[data-color-mode="dark"] .pagination a, 
+        html[data-color-mode="dark"] .pagination a,
         html[data-color-mode="dark"] .pagination span {
             color: #ccc;
         }
         html[data-color-mode="dark"] .pagination a:hover {
             background: #1a1a1a;
-            color: #fff;
-        }
-        .pagination .previous_page[aria-disabled="true"] {
-            opacity: 0.4;
         }
 
-        /* 页脚 */
+        /* ===== 页脚 ===== */
         #footer {
             margin-top: 4rem;
             padding-top: 2rem;
@@ -253,19 +264,14 @@
             color: #000;
             text-decoration: underline;
         }
-        html[data-color-mode="dark"] #footer a {
-            color: #aaa;
-        }
 
-        /* 响应式 */
+        /* ===== 响应式 ===== */
         @media (max-width: 640px) {
             body {
                 padding: 1rem;
             }
-            .SideNav-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+            .postTitle {
+                font-size: 1.6rem;
             }
             .blogTitle {
                 font-size: 1.2rem;
@@ -274,12 +280,18 @@
                 width: 32px;
                 height: 32px;
             }
+            .SideNav-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             .listLabels {
                 margin-left: 32px;
             }
+            .title-right {
+                margin-left: auto;
+            }
         }
 
-        /* 辅助 */
         ::selection {
             background: #e0e0e0;
             color: #000;
@@ -290,5 +302,5 @@
         }
     `;
     document.head.appendChild(style);
-    console.log("%c✓ 极简模式已启用 | 一个马扎", "color: #333; font-size: 12px;");
+    console.log("%c✓ 统一极简样式已加载（首页+文章页）", "color: #333; font-size: 12px;");
 })();
