@@ -1,9 +1,9 @@
-// 文件名: ygmz-unified.js
-// 用途: 同时美化首页列表 + 文章正文页
+// 文件名: ygmz-retro.js
+// 风格: 老式博客/打字机风格 · 极朴素质感
 (function() {
     const style = document.createElement('style');
     style.textContent = `
-        /* ===== 全局基础 ===== */
+        /* ---------- 复古基调 ---------- */
         * {
             margin: 0;
             padding: 0;
@@ -11,296 +11,262 @@
         }
 
         body {
-            background: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-            color: #111111;
-            line-height: 1.6;
-            padding: 2rem 1rem;
+            background: #fdf8ed;  /* 旧纸色 */
+            color: #2c2418;
+            font-family: 'Courier New', 'Fira Code', 'Menlo', 'Consolas', monospace;
+            font-size: 15px;
+            line-height: 1.65;
+            padding: 2rem 1.5rem;
             margin: 0 auto;
             max-width: 860px;
+            box-shadow: none;
         }
 
+        /* 暗色模式保留一点旧感（深色纸） */
         html[data-color-mode="dark"] body {
-            background: #0a0a0a;
-            color: #ededed;
+            background: #1a1612;
+            color: #d9cdb0;
         }
 
-        /* ===== 头部（首页和文章页通用）===== */
+        /* ---------- 头部 ---------- */
         #header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
             flex-wrap: wrap;
             gap: 1rem;
-            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
             margin-bottom: 2rem;
-            border-bottom: 1px solid #eaeaea;
+            border-bottom: 3px double #b87c4f;
         }
-
         html[data-color-mode="dark"] #header {
-            border-bottom-color: #2a2a2a;
+            border-bottom-color: #7e5a3e;
         }
 
-        /* 首页：标题区 */
+        /* 首页标题区 */
         .title-left {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.6rem;
         }
 
         .avatar {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            transition: opacity 0.2s;
+            width: 48px;
+            height: 48px;
+            border-radius: 0;     /* 不要圆角 */
+            border: 2px solid #b87c4f;
+            padding: 2px;
+            transition: none;
         }
         .avatar:hover {
-            opacity: 0.8;
+            opacity: 0.9;
+            transform: none;
         }
 
-        .blogTitle {
-            font-size: 1.5rem;
-            font-weight: 600;
+        .blogTitle, .postTitle {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
             letter-spacing: -0.3px;
+            text-decoration: none;
+            font-size: 1.6rem;
         }
+        .blogTitle { font-size: 1.5rem; }
+        .postTitle { font-size: 1.8rem; margin: 0; }
 
-        /* 文章页：大标题 */
-        .postTitle {
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            line-height: 1.3;
-            margin: 0;
-        }
-
+        /* 右侧按钮组 */
         .title-right {
             display: flex;
             gap: 0.25rem;
         }
-
         .title-right .btn {
-            padding: 8px 10px;
-            border-radius: 8px;
-            transition: background 0.2s;
-            color: #555;
+            padding: 6px 8px;
+            border: 1px solid #b87c4f;
+            background: #fdf3e0;
+            border-radius: 0;
+            transition: background 0.1s;
         }
         .title-right .btn:hover {
-            background: #f0f0f0;
+            background: #e6d5b8;
+        }
+        html[data-color-mode="dark"] .title-right .btn {
+            background: #2c2418;
+            border-color: #7e5a3e;
         }
         html[data-color-mode="dark"] .title-right .btn:hover {
-            background: #2a2a2a;
+            background: #3f3322;
         }
 
-        /* ===== 首页：文章列表 ===== */
+        /* ---------- 首页文章列表（极简线条）---------- */
         .SideNav {
             border: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
         }
 
         .SideNav-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0;
-            text-decoration: none;
-            border-bottom: 1px solid #f0f0f0;
-            transition: all 0.2s ease;
-            gap: 1rem;
+            align-items: baseline;
             flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0.9rem 0;
+            text-decoration: none;
+            border-bottom: 1px dotted #c9af8b;
+            transition: none;
         }
-
         html[data-color-mode="dark"] .SideNav-item {
-            border-bottom-color: #1f1f1f;
+            border-bottom-color: #5e4b32;
         }
 
         .SideNav-item:hover {
-            transform: translateX(4px);
-            border-bottom-color: #ccc;
+            background: #f4ecdb;
+            padding-left: 8px;
+        }
+        html[data-color-mode="dark"] .SideNav-item:hover {
+            background: #2f281e;
         }
 
         .d-flex {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             flex: 2;
-            min-width: 200px;
         }
 
         .SideNav-icon {
-            width: 20px;
-            height: 20px;
-            opacity: 0.5;
-            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            opacity: 0.7;
         }
 
         .listTitle {
-            font-size: 1rem;
-            font-weight: 450;
-            transition: color 0.2s;
+            font-size: 0.95rem;
+            font-weight: normal;
+            font-family: monospace;
         }
 
         .listLabels {
             display: flex;
-            gap: 10px;
-            align-items: center;
-            font-size: 0.75rem;
+            gap: 12px;
+            font-size: 0.7rem;
+            font-family: monospace;
         }
 
         .Label {
             background: none;
+            border: 1px solid #c9af8b;
             padding: 2px 8px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 400;
-            color: #888;
-            border: 1px solid #e0e0e0;
+            border-radius: 0;
+            font-size: 0.65rem;
+            color: #7a5a3a;
         }
-        .Label a {
-            color: #888 !important;
-            text-decoration: none;
-        }
+        .Label a { color: #7a5a3a !important; }
         .LabelTime {
-            background: none;
             border: none;
-            color: #aaa;
+            color: #9b7e5c;
         }
-
         html[data-color-mode="dark"] .Label {
-            border-color: #333;
-            color: #aaa;
+            border-color: #7e5a3e;
+            color: #c2a16b;
         }
+        html[data-color-mode="dark"] .Label a { color: #c2a16b !important; }
 
-        /* ===== 文章页：正文 ===== */
+        /* ---------- 文章正文（打字机风格）---------- */
         .markdown-body {
-            font-size: 1rem;
-            line-height: 1.75;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #f0f0f0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted #c9af8b;
         }
-
-        html[data-color-mode="dark"] .markdown-body {
-            border-bottom-color: #1f1f1f;
-        }
-
         .markdown-body p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
-
         .markdown-body hr {
-            margin: 2rem 0;
             border: none;
-            border-top: 1px solid #eaeaea;
+            border-top: 2px dashed #c9af8b;
+            margin: 2rem 0;
         }
 
         /* 评论按钮 */
         #cmButton {
-            background: transparent;
-            border: 1px solid #e0e0e0;
-            padding: 0.75rem 1.5rem;
-            font-size: 0.85rem;
-            border-radius: 30px;
+            background: #fdf3e0;
+            border: 2px solid #b87c4f;
+            padding: 0.5rem 1.2rem;
+            font-family: monospace;
+            font-size: 0.8rem;
+            border-radius: 0;
             cursor: pointer;
-            transition: all 0.2s;
             margin-top: 2rem;
         }
         #cmButton:hover {
-            background: #f5f5f5;
-            border-color: #ccc;
+            background: #e6d5b8;
         }
         html[data-color-mode="dark"] #cmButton {
-            border-color: #333;
-            color: #ccc;
-        }
-        html[data-color-mode="dark"] #cmButton:hover {
-            background: #1a1a1a;
+            background: #2c2418;
+            border-color: #7e5a3e;
+            color: #d9cdb0;
         }
 
-        /* ===== 分页（首页）===== */
-        .paginate-container {
-            margin-top: 3rem;
-        }
+        /* ---------- 分页 ---------- */
         .pagination {
             display: flex;
             justify-content: center;
             gap: 1rem;
+            margin-top: 2rem;
         }
         .pagination a, .pagination span {
-            background: transparent;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            color: #333;
+            background: none;
+            border: 1px solid #b87c4f;
+            padding: 4px 12px;
+            font-family: monospace;
+            font-size: 0.8rem;
             text-decoration: none;
+            color: #5e3e22;
         }
         .pagination a:hover {
-            background: #f5f5f5;
+            background: #e6d5b8;
         }
         html[data-color-mode="dark"] .pagination a,
         html[data-color-mode="dark"] .pagination span {
-            color: #ccc;
-        }
-        html[data-color-mode="dark"] .pagination a:hover {
-            background: #1a1a1a;
+            border-color: #7e5a3e;
+            color: #c2a16b;
         }
 
-        /* ===== 页脚 ===== */
+        /* ---------- 页脚 ---------- */
         #footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #eaeaea;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px dotted #c9af8b;
             text-align: center;
-            font-size: 0.75rem;
-            color: #999;
-        }
-        html[data-color-mode="dark"] #footer {
-            border-top-color: #1f1f1f;
+            font-size: 0.7rem;
+            font-family: monospace;
+            color: #8e6d48;
         }
         #footer a {
-            color: #555;
-            text-decoration: none;
-        }
-        #footer a:hover {
-            color: #000;
+            color: #5e3e22;
             text-decoration: underline;
         }
-
-        /* ===== 响应式 ===== */
-        @media (max-width: 640px) {
-            body {
-                padding: 1rem;
-            }
-            .postTitle {
-                font-size: 1.6rem;
-            }
-            .blogTitle {
-                font-size: 1.2rem;
-            }
-            .avatar {
-                width: 32px;
-                height: 32px;
-            }
-            .SideNav-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .listLabels {
-                margin-left: 32px;
-            }
-            .title-right {
-                margin-left: auto;
-            }
+        html[data-color-mode="dark"] #footer a {
+            color: #c2a16b;
         }
 
+        /* ---------- 响应式 ---------- */
+        @media (max-width: 640px) {
+            body { padding: 1rem; }
+            .blogTitle, .postTitle { font-size: 1.2rem; }
+            .SideNav-item { flex-direction: column; }
+            .listLabels { margin-left: 28px; }
+        }
+
+        /* 选中文本 */
         ::selection {
-            background: #e0e0e0;
-            color: #000;
+            background: #dac29c;
+            color: #2c2418;
         }
         html[data-color-mode="dark"] ::selection {
-            background: #333;
-            color: #fff;
+            background: #5e4b32;
+            color: #eeddbb;
         }
     `;
     document.head.appendChild(style);
-    console.log("%c✓ 统一极简样式已加载（首页+文章页）", "color: #333; font-size: 12px;");
+    console.log("%c↻ 复古打字机样式已加载", "color: #b87c4f; font-size: 12px; font-family: monospace");
 })();
